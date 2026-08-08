@@ -17,3 +17,22 @@ encodeButton.addEventListener("click", () => {
 
     }
 })
+
+decodeButton.addEventListener("click", () => {
+    const encoded = input.value;
+
+    if (encoded) {
+        // 6 -> 0, 7 -> 1
+        const binary = encoded
+            .replaceAll("6", "0")
+            .replaceAll("7", "1");
+
+        // Split into 8-bit chunks and convert to bytes
+        const bytes = binary.match(/.{8}/g).map(byte =>
+            parseInt(byte, 2)
+        );
+
+        // UTF-8 bytes -> string
+        output.value = new TextDecoder().decode(new Uint8Array(bytes));
+    }
+});
