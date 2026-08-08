@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #eef2f7;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    margin: 0 0 24px;
+    text-align: center;
+    color: #222;
+}
+
+.six {
+    font-size: 100px;
+    display: inline-block;
+    animation: sixMoveUpDown 1.5s ease-in-out infinite;
+}
+
+@keyframes sixMoveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(+10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.seven {
+    font-size: 100px;
+    display: inline-block;
+    animation: sevenMoveUpDown 1.5s ease-in-out infinite;
+}
+
+@keyframes sevenMoveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(+10px);
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 14px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font: inherit;
+    resize: vertical;
+}
+
+textarea:focus {
+    border-color: #4169e1;
+    outline: 1px solid rgba(65, 105, 225, 0.15);
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4169e1;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #365dd1;
+}
+
+#output-text {
+    background: #f8f8f8;
+}
