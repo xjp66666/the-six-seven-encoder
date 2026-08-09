@@ -93,7 +93,7 @@ textarea:focus {
 }
 
 button {
-    flex: 1;
+    flex: 2;
     padding: 12px;
     border: none;
     border-radius: 8px;
@@ -107,6 +107,15 @@ button:hover {
     background: #365dd1;
 }
 
+#swap-button {
+    flex: 1;
+}
+
 #output-text {
     background: #f8f8f8;
+}
+
+#copy-button {
+    width: 100%;
+    margin-top: 12px;
 }
